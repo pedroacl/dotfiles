@@ -1,0 +1,67 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/tmp/d-11684-5942-czqryu/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/tmp/d-11684-5942-czqryu/package.tgz",
+        "spec": "/tmp/d-11684-5942-czqryu/package.tgz",
+        "type": "local"
+      },
+      "/tmp/apm-install-dir-11684-5942-1ynfhbj"
+    ]
+  ],
+  "_from": "../d-11684-5942-czqryu/package.tgz",
+  "_id": "gaia-dark-syntax@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gaia-dark-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/tmp/d-11684-5942-czqryu/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/tmp/d-11684-5942-czqryu/package.tgz",
+    "spec": "/tmp/d-11684-5942-czqryu/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11684-5942-czqryu/package.tgz",
+  "_shasum": "45beb98de755e9d3265dd395e7636c0b57693851",
+  "_shrinkwrap": null,
+  "_spec": "/tmp/d-11684-5942-czqryu/package.tgz",
+  "_where": "/tmp/apm-install-dir-11684-5942-1ynfhbj",
+  "bugs": {
+    "url": "https://github.com/protesilaos/gaia-dark-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Low-to-medium contrast theme. Gives an earthly feel.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0"
+  },
+  "homepage": "https://github.com/protesilaos/gaia-dark-syntax#readme",
+  "keywords": [
+    "syntax",
+    "brown",
+    "orange",
+    "green",
+    "dark"
+  ],
+  "license": "MIT",
+  "name": "gaia-dark-syntax",
+  "optionalDependencies": {},
+  "readme": "# Gaia syntax theme (dark version)\n\nLow-to-medium contrast theme. The most prevalent colours are variants of brown, green, orange, cyan, and yellow.\n\n*Gaia* comes in standalone light and dark versions (see further info below).\n\n## Screenshot\n\n![gaia dark screenshot](https://raw.githubusercontent.com/protesilaos/prot16/master/gaia/img/gaia_dark_sample.png)\n\n*The font in the screenshot is [Hack](https://github.com/chrissimpkins/Hack)*.  \n*Demo code by http://codemirror.net/mode/javascript/index.html*  \n*The UI theme is https://atom.io/themes/atom-material-ui*.\n\n## Download\n\nSearch for `gaia-dark-syntax` in Settings > Install > Themes. Or install it directly using the command:\n\n```shell\napm install gaia-dark-syntax\n```\n\n## Further information\n\nProject page: [http://www.protesilaos.com/gaia](http://www.protesilaos.com/gaia)\n\nGaia light version: [https://atom.io/themes/gaia-syntax](https://atom.io/themes/gaia-syntax)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/protesilaos/gaia-dark-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "1.0.0"
+}
