@@ -4,6 +4,8 @@ set number
 set relativenumber
 set expandtab
 set cursorline
+set guifont=Monaco\ 12
+set linespace=6
 " set colorcolumn=80
 
 " Prettier
@@ -11,9 +13,12 @@ let g:prettier#config#use_tabs = 'true'
 let g:prettier#config#semi = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_max_files = 0
+let g:rainbow_active = 1
 
 autocmd FileType javascript setlocal ts=4 sts=0 sw=4 noexpandtab
 
@@ -29,6 +34,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'prettier/vim-prettier'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'godlygeek/tabular'
@@ -39,6 +45,16 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'zivyangll/git-blame.vim'
+Plugin 'elixir-editors/vim-elixir'
+Plugin 'alvan/vim-closetag'
+Plugin 'w0rp/ale'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'othree/yajs.vim'
+Plugin 'valloric/youcompleteme'
+
 " Plugin 'git://git.ngmy.com/vim-rubocop.git'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -68,9 +84,25 @@ filetype plugin indent on    " required
 
 imap jk <Esc>
 
+"set background=dark
+"colorscheme gruvbox
+
+" Prettier
+let g:prettier#autoformat = 0
+let g:prettier#config#use_tabs = 'false'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+
 set background=dark
-colorscheme gruvbox
+colorscheme palenight
 
 " highlight trailing whitespaces
 highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$/
+
+" FORMATTERS
+au FileType javascript setlocal formatprg=prettier
+au FileType javascript.jsx setlocal formatprg=prettier
+au FileType typescript setlocal formatprg=prettier\ --parser\ typescript
+au FileType html setlocal formatprg=js-beautify\ --type\ html
+au FileType scss setlocal formatprg=prettier\ --parser\ css
+au FileType css setlocal formatprg=prettier\ --parser\ css
